@@ -1,0 +1,46 @@
+#left nav{
+    padding: 1rem 0;
+}
+
+#left nav ul{
+    list-style: none;
+}
+
+#left nav ul li #logo{
+    fill: rgba(29, 161, 242, 1);
+    margin-bottom: 10px;
+}
+
+#left nav ul li a{
+    position: relative;
+    font-size: 1.3rem;
+    font-weight: 300;
+    padding: 0.7rem 0;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    transition: 200ms ease-in-out;
+    display: grid;
+    grid-template-columns: .3fr 1fr;
+    align-items: center;
+}
+
+#left nav ul li a.active{
+    font-weight: 700;
+    color: rgba(29, 161, 242, 1);
+    fill: rgba(29, 161, 242, 1);
+}
+
+#left nav ul li a:hover  {
+    background: rgba(29, 161, 242, 0.2);
+    color: rgba(29, 161, 242, 1);
+    border-top-left-radius: 30px 20px;
+    border-bottom-left-radius: 30px 20px;
+    border-top-right-radius: 30px 20px;
+    border-bottom-right-radius: 30px 20px;
+    padding: 0.7rem 0rem 0.7rem 0.8rem ;
+  }
+
+#left nav ul li a:hover svg {
+    fill: rgba(29, 161, 242, 1);
+}

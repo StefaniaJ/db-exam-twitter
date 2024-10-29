@@ -1,0 +1,900 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    width: 100%;
+    overflow: hidden;
+    overflow-y: scroll;
+    font-size: 1rem;
+    font-weight: 300;
+    font-family: "Roboto", sans-serif;
+  }
+  button {
+    width: 100%;
+    padding: 0.1rem 0px;
+    border: none;
+    border-radius: 4rem;
+    color: white;
+    background: rgba(29, 161, 242, 1);
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 8px 28px;
+    cursor: pointer;
+    font-family: 'Roboto';
+  }
+
+  button:hover, button:focus{
+    background-color:rgb(27 141 211);
+    transition: 200ms ease-in-out;
+    outline: none;
+  }
+
+
+
+
+  /* The Modal (background) */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    padding-top: 2.3rem; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+
+  /* Modal Content */
+  .modal-content {
+    background-color: rgba(255,255,255,1.00);
+    margin: auto;
+    border-radius: 1.2rem;
+    width: 600px;
+    height: 338px;
+  }
+
+  /* The Close Button */
+  .close {
+    color: rgba(29, 161, 242, 1);
+    font-size: 35px;
+    margin-left: 1rem;
+    padding-left: .7rem;
+    padding-right: .7rem;
+    height: auto;
+  transition: all .5s;
+  border-radius: 50%;
+  }
+
+  .close:hover,
+  .close:focus {
+    cursor: pointer;
+    background: rgba(29, 161, 242, 0.2);
+    color: rgba(29, 161, 242, 1);
+  }
+
+
+  /* ///////////////////////// */
+.post-tweet-wrapper{
+    display: grid;
+    grid-template-columns: .12fr 1fr;
+    padding: 10px 1rem;
+    }
+
+  .post-tweet-wrapper img{
+  width: 50px;
+  border-radius: 50%;
+}
+
+.post-tweet-wrapper form {
+  padding-top: 0.6rem;
+}
+
+.post-tweet-wrapper form textarea{
+  overflow:hidden;
+  font-family: "Roboto", sans-serif;
+  overflow-y: scroll;
+  font-size: 1.2rem;
+  font-weight: 400;
+  width: 100%;
+  min-height: 128px;
+  border: none;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.post-tweet-wrapper form textarea:focus {
+  outline-style: none;
+}
+
+
+.post-tweet-wrapper form .icons {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 5fr;
+  align-items: center;
+  padding-top: 10px;
+}
+
+
+.modal-tweet-replay{
+  display: grid;
+  grid-template-columns: 25px 1fr;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgb(230, 236, 240);
+  fill: rgba(29, 161, 242, 1);
+  color: rgba(29, 161, 242, 1);
+  cursor: pointer;
+}
+
+.modal-tweet-replay svg{
+width: 20px !important;
+}
+
+.modal-tweet-replay p{
+    font-size: 13px;
+    font-weight: 600;
+    align-self: center;
+}
+
+.post-tweet-wrapper form .icons a svg {
+  fill: rgba(29, 161, 242, 1);
+  width: 2.5rem !important;
+  height: auto;
+  transition: all .5s;
+padding: .5rem;
+border-radius: 50%;
+}
+
+.post-tweet-wrapper  form .icons a svg:hover {
+  background: rgba(29, 161, 242, 0.2);
+  color: rgba(29, 161, 242, 1);
+}
+
+.post-tweet-wrapper form .icons button {
+  justify-self: end;
+  width: 38%;
+  padding: 0.8rem 0;
+}
+#left{
+    /* background-color: plum; */
+    position: fixed; top: 0px; left: 5%;
+    width: 20%;
+    height: 100%;
+    padding: 0px 1rem 1rem 0px;
+}
+
+#left svg{
+width: 30px;
+}
+#left button{
+    bottom: 1rem;
+    padding: 0.9rem 0;
+    font-weight: 800;
+    letter-spacing: 1px !important;
+    font-size: 16px !important;
+  }
+#left nav{
+    padding: 1rem 0;
+}
+
+#left nav ul{
+    list-style: none;
+}
+
+#left nav ul li #logo{
+    fill: rgba(29, 161, 242, 1);
+    margin-bottom: 10px;
+}
+
+#left nav ul li a{
+    position: relative;
+    font-size: 1.3rem;
+    font-weight: 300;
+    padding: 0.7rem 0;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    transition: 200ms ease-in-out;
+    display: grid;
+    grid-template-columns: .3fr 1fr;
+    align-items: center;
+}
+
+#left nav ul li a.active{
+    font-weight: 700;
+    color: rgba(29, 161, 242, 1);
+    fill: rgba(29, 161, 242, 1);
+}
+
+#left nav ul li a:hover  {
+    background: rgba(29, 161, 242, 0.2);
+    color: rgba(29, 161, 242, 1);
+    border-top-left-radius: 30px 20px;
+    border-bottom-left-radius: 30px 20px;
+    border-top-right-radius: 30px 20px;
+    border-bottom-right-radius: 30px 20px;
+    padding: 0.7rem 0rem 0.7rem 0.8rem ;
+  }
+
+#left nav ul li a:hover svg {
+    fill: rgba(29, 161, 242, 1);
+}
+#left #profile-section{
+    /* background-color: saddlebrown; */
+    position: relative;
+    display: inline-block;
+    margin-top: 100px;
+    width: 100%;
+}
+
+#left .profile-section-grid{
+    display: grid;
+    grid-template-columns: .5fr 1fr .1fr;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#left .profile-section-grid:hover{
+    background: rgba(29, 161, 242, 0.2);
+    border-top-left-radius: 30px 20px;
+    border-bottom-left-radius: 30px 20px;
+    border-top-right-radius: 30px 20px;
+    border-bottom-right-radius: 30px 20px;
+    cursor: pointer;
+}
+
+#left .profile-section-grid img{
+ width: 50px;
+ border-radius: 50%;
+}
+
+#left .profile-section-grid svg{
+    width: 20px;
+    align-self: center;
+
+   }
+
+/* Drop up menu */
+#left .dropup-content {
+    /* display: block; */
+    position: absolute;
+    bottom: 55px;
+    background-color: white;
+    min-width: 270px;
+    z-index: 10;
+    border: 1px solid #5B7083;
+    display: none;
+    border-radius: 10px;
+    -webkit-box-shadow:2px 2px 15px 0px rgba(0,0,0,0.3);
+    -moz-box-shadow: 2px 2px 15px 0px rgba(0,0,0,0.3);
+    box-shadow: 2px 2px 15px 0px rgba(0,0,0,0.3);
+    /* padding-left: 5px;
+    padding-right: 5px; */
+    padding-top: 10px;
+    display: none;
+}
+
+
+#left .dropup-content a {
+    color:black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 15px;
+    border-bottom: 1px solid #5B7083;
+}
+
+ #left .dropup-content a:hover {
+    background-color:rgb(247, 249, 250);
+}
+
+#left .show{
+    display: block;
+}
+
+#left .dropup-content .profile-section-grid{
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+#left .dropup-content .profile-section-grid:hover{
+    background-color: white;
+    cursor: text;
+}
+
+
+#left .dropup-content .profile-section-grid svg{
+  fill: rgba(29, 161, 242, 1);
+}
+#middle .tweet{
+    display: grid;
+    grid-template-columns: .3fr 1fr;
+    column-gap: 10px;
+    background-color: white;
+    border-bottom: 1px solid  rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+#middle .tweet .user_image img{
+width: 100px;
+border-radius: 50%;
+height: 100px;
+}
+
+
+#middle .tweet .tweet_message{
+word-break: break-all;
+}
+
+#middle .tweet .tweet_elements {
+grid-column: 2/3;
+display: grid;
+grid-template-columns: 10fr 10fr 10fr 10fr 10fr;
+color: rgba(0, 0, 0, 0.5);
+}
+
+#middle .tweet .tweet_elements div{
+font-size: 0.8rem;
+}
+
+/* #middle .tweet .tweet_elements div .love{
+    color: red;
+    } */
+
+.love{
+    color: red;
+    }
+#middle{
+    position: absolute; top: 0px; left: 50%; transform: translate(-50%);
+    width: 50%;
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+    height: 500px;
+    z-index: -1;
+    padding-top: 1rem;
+}
+
+.subpage{
+    display: none;
+  }
+
+.subpage:first-child{
+    display: grid;
+  }
+#middle #middle-title-wrapper {
+    display: grid;
+    grid-template-columns: 24fr 1fr;
+    height: 2.5rem;
+    padding: 0 1rem;
+    border-bottom: 1px solid rgb(230, 236, 240);
+  }
+#middle #middle-title-wrapper p {
+    font-weight: 900;
+    font-size: 1.3rem;
+  }
+
+#middle #middle-title-wrapper svg {
+    width: 1.5em;
+    fill: rgba(29, 161, 242, 1);
+  }
+
+
+  #middle .post-tweet-wrapper form textarea{
+    min-height: 45px;
+  }
+
+  #middle .post-tweet-wrapper{
+    border-bottom: 10px solid rgb(230, 236, 240);
+
+  }
+
+
+  #middle .updateTweet{
+  grid-column: 1/3;
+  }
+
+  #middle .updateTweet .icons{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+
+#middle .updateTweet .icons a {
+width: 20px;
+color: gray;
+  }
+#middle #profileMiddleRowOne {
+ display: grid;
+ grid-template-columns: .12fr 1fr;
+ padding-bottom: 5px;
+  }
+
+#middle #profileMiddleRowOne a svg{
+    width: 1.5rem;
+    fill:#1DA1F2;
+    align-self: center;
+}
+
+#middle #profileMiddleRowOne a svg:hover{
+cursor: pointer;
+}
+
+#middle  #profileMiddleRowOne .profileMiddleUserName{
+    font-weight: 900;
+    font-size: 1.3rem;
+    color: black;
+    }
+
+#middle #profileMiddleRowOne p{
+  grid-column: 2/3;
+  font-size: 0.8em;
+  color: #657786;
+  }
+
+#middle #profileMiddleRowTwo div{
+    grid-column: 1/4;
+    /* background-image: url('images/flamingo.jpg');   */
+    /* if I don't have any image, show a gray background */
+    background-color: #c4cfd6;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size:  620px 250;
+    min-width: auto;
+    /* max-width: 620px; */
+    min-height: 250px;
+    max-height: 250px;
+  }
+
+ #middle  #profileMiddleRowThree{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin-top: -105px;
+      padding-top: 1rem;
+      padding-left: 10px;
+    padding-right: 10px;
+  }
+
+#middle #profileMiddleRowThree img{
+    align-self: center;
+    width: 9rem;
+    border-radius: 50%;
+    border: 4px solid white;
+
+  }
+
+ #middle #profileMiddleRowThree button{
+    align-self: center;
+    padding: .6rem 0px;
+    margin-top: 5.3rem;
+    background-color: white;
+    border: 1px solid #1DA1F2;
+    color: #1DA1F2;
+    font-weight: 600;
+    width: 110px;
+    box-shadow: none;
+    justify-self: end;
+  }
+
+
+/* Profile middle four */
+#middle #profileMiddleRowFour {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#middle #profileMiddleRowFour p{
+font-size: 1rem;
+color: #657786;
+padding-bottom: 10px;
+}
+
+#middle #profileMiddleJoined svg{
+    fill: #657786;
+    width: 1.2rem;
+    vertical-align: bottom;
+}
+
+#middle #profileMiddleRowFour .profileMiddleUserName{
+    font-weight: 900;
+    font-size: 1.3rem;
+    color: black;
+    padding-bottom: 2px;
+}
+
+#middle #profileMiddleFollowers, #middle #profileMiddleFollowing{
+    display: inline-block;
+}
+
+#middle #profileMiddleFollowers span, #middle #profileMiddleFollowing span{
+    color: black;
+    padding-right: 5px;
+}
+
+#middle #profileMiddleFollowers span{
+     padding-left: 10px;
+}
+
+
+/* Profile middle five */
+#middle #profileMiddleRowTFive{
+display: grid;
+grid-template-columns: 1fr 1fr 1fr 1fr;
+justify-items: center;
+padding: 0;
+border-bottom: 1px solid rgb(230, 236, 240);
+padding-bottom: .73rem;
+padding-top: 1rem;
+border-left: 1px solid rgb(230, 236, 240);
+border-right: 1px solid rgb(230, 236, 240);
+}
+
+#middle #profileMiddleRowTFive a{
+    color: #657786;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    padding: .7rem 2rem;
+}
+#middle #profileMiddleRowTFive #replies{
+ padding-left: 0 !important;
+ padding-right: 0 !important;
+}
+
+ #middle #profileMiddleRowTFive a:hover{
+ color: #1DA1F2;
+  background-color: rgba(29, 161, 242, 0.2);;
+  /* text-decoration: underline; */
+ }
+
+#middle #profileMiddleRowTFive .profileSubPageActive{
+    color: #1DA1F2;
+    border-bottom: 2px solid #1DA1F2;
+  }
+
+
+/* Profile middle six */
+#middle #profileMiddleRowTSix{
+   padding-top: 1rem;
+   border-left: 1px solid rgb(230, 236, 240);
+   border-right: 1px solid rgb(230, 236, 240);
+}
+
+#middle #profileMiddleRowTSix .profileSubpages{
+    display: none;
+ }
+
+#middle #profileMiddleRowTSix .profileSubpages:first-child{
+    display: block;
+ }
+
+#middle #profileTweetsAndRepliesSubpage, #middle #profileMediaSubpage, #middle #profileLinksSubpage{
+padding: 2rem 1rem;
+text-align: center;
+}
+
+#middle .profileSubpageTitleDefould{
+font-size: 1.3rem;
+font-weight: 600;
+padding-bottom: 1rem;
+}
+
+#middle .profileSubpageSubtitleDefould{
+font-size: 1rem;
+padding-bottom: 1rem;
+color: #657786;;
+}
+
+#middle #profileTweetsAndRepliesSubpage button{
+width: 8rem;
+padding: .6rem 0;
+font-weight: 800;
+}
+
+#middle #profileMediaSubpage button{
+padding: .6rem 0;
+font-weight: 800;
+width: 14rem;
+}
+/* Profile middle six */
+/* #middle #profileMiddleRowTSix{
+    padding-top: 1rem;
+    border-left: 1px solid rgb(230, 236, 240);
+    border-right: 1px solid rgb(230, 236, 240);
+ } */
+
+ #middle #profileMiddleRowTSix .profileOtherUserSubpages{
+     display: none;
+  }
+
+ #middle #profileMiddleRowTSix .profileOtherUserSubpages:first-child{
+     display: block;
+  }
+
+ #middle #profileOtherUserTweetsAndRepliesSubpage, #middle #profileOtherUserMediaSubpage, #middle #profileOtherUserLinksSubpage{
+ padding: 2rem 1rem;
+ text-align: center;
+ }
+
+ #middle .profileSubpageTitleDefould{
+ font-size: 1.3rem;
+ font-weight: 600;
+ padding-bottom: 1rem;
+ }
+
+ #middle .profileSubpageSubtitleDefould{
+ font-size: 1rem;
+ padding-bottom: 1rem;
+ color: #657786;;
+ }
+
+ #middle #profileOtherUserTweetsAndRepliesSubpage button{
+ width: 8rem;
+ padding: .6rem 0;
+ font-weight: 800;
+ }
+
+ #middle #profileOtherUserMediaSubpage button{
+ padding: .6rem 0;
+ font-weight: 800;
+ width: 14rem;
+ }
+#right{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 25%;
+    padding: 0.5rem 5% 1rem 1rem;
+    z-index: -1;
+}
+
+#right #searchWrapper{
+  margin-bottom: 15px;
+}
+
+#right #searchWrapper form{
+    position: relative;
+}
+
+#right form i{
+    position: absolute;
+    top: 0.85rem; left: 1rem;
+    color: rgba(0, 0, 0, 0.5);
+  }
+#right form input{
+    background-color:#ebeef0;
+    padding-left: 2.5rem;
+    height: 40px;
+    border: none;
+    border-radius: 4rem;
+    width: 115%;
+  }
+
+  #right form input:focus{
+    background-color: white;
+    outline: none;
+    border: 1px solid rgba(29, 161, 242, 1);
+  }
+
+#right #searchWrapper #searchResults{
+    width: 100%;
+    height: 50%;
+    background-color:white;
+    box-shadow: rgba(0, 0, 0, 0.09) -1px 7px 14px;
+    padding: 1rem;
+    gap: 5px;
+    width: 115%;
+    border-radius: 4px;
+    overflow-y: scroll;
+    display: none;
+  }
+
+  #right .result{
+    display: grid;
+    grid-template-columns: 45px 1fr;
+    grid-gap: 0.5rem;
+  }
+
+  #right .result img{
+    height: 40px;
+    border-radius: 50%;
+  }
+
+  #right .result hr{
+    grid-column: 1/3;
+    color: rgb(230, 236, 240);
+    opacity: .3;
+  }
+
+  /* ************************ */
+  #right .rightBoxesWrapper  {
+    display: grid;
+    grid-template-rows: auto;
+    border-radius: 1.2rem;
+    margin-bottom: 1rem;
+    width: 115%;
+  }
+
+  #right .rightBoxesWrapper:not(:last-child)  {
+    background-color: 	#F5F8FA;
+  }
+
+  /* BOX 2 */
+  #right #rightBoxTwoWrapper > .rightRows {
+    display: grid;
+    grid-template-columns:14fr 1fr;
+    padding: .5rem 1rem;
+    transition: all .5s;
+  }
+
+  #right #rightBoxTwoWrapper .rightRows:hover:first-child {
+    background-color: unset;
+  }
+
+
+  /* last element doesn't have a border */
+  #right .rightBoxesWrapper > .rightRows:not(:last-child)  {
+    border-bottom: 1px solid #E1E8ED;
+  }
+
+  /* when hover, the border bottom will be rounded */
+  #right .rightBoxesWrapper > .rightRows:last-child  {
+    border-bottom-left-radius: 1.2rem;
+    border-bottom-right-radius:  1.2rem;
+  }
+
+  #right .rightRows:hover{
+    background-color: #E1E8ED;
+  }
+
+  #right #rightBoxTwoWrapper .rightRows svg{
+    height: auto;
+    transition: all .5s;
+    padding: .5rem;
+    border-radius: 50%;
+  }
+
+  #right .rightRows svg:hover {
+    background: rgba(29, 161, 242, 0.2);
+    color: rgba(29, 161, 242, 1);
+  }
+
+  #right #rightBoxTwoWrapper .rightRows:not(:first-child) svg{
+    width: 2rem;
+    fill:#AAB8C2;
+  }
+
+  #right #rightBoxTwoRowOne svg{
+    width: 2.5rem;
+    fill: rgba(29, 161, 242, 1);
+  }
+
+
+  #right .rightRows h3{
+    font-weight: 900;
+    font-size: 1.3rem;
+    align-self: center;
+  }
+
+  #right #rightBoxTwoWrapper .rightRows .rightRowsTitleAndTweets{
+    font-size: .8rem;
+   color: #657786;
+  }
+
+  #right #rightBoxTwoWrapper .rightRows .rightRowsName{
+    font-weight: 600;
+    padding-top: 5px;
+    padding-bottom: 13px;
+  }
+
+  #right .rightBoxShowMore{
+    font-weight: 400;
+    padding-top: 5px;
+    padding-bottom: 13px;
+    color:  #1DA1F2;
+    cursor: pointer;
+  }
+
+
+  /* BOX 3 */
+  #right #rightBoxThreeWrapper > .rightRows {
+    display: grid;
+    grid-template-columns:4fr 7fr 4fr;
+    padding: .5rem 1rem;
+    transition: all .5s;
+    align-items: start;
+  }
+
+  #right #rightBoxThreeWrapper .rightRows:hover:first-child {
+    background-color: unset;
+  }
+
+
+  #right #rightBoxThreeWrapper .rightRows h3{
+    grid-column: 1/4;
+  }
+
+  #right #rightBoxThreeWrapper .rightRows img{
+    width: 3rem;
+    border-radius: 50%;
+  }
+
+  #right  #rightBoxThreeWrapper .rightRows .rightRowsTitle{
+    font-weight: 600;
+  }
+
+  #right #rightBoxThreeWrapper .rightRows .rightRowsName{
+   color: #657786;
+   padding-top: 5px;
+   padding-bottom: 13px;
+  }
+  #right #rightBoxThreeWrapper .rightRows .rightRowsPromoted{
+    font-size: 0.8rem;
+   color: #657786;
+  }
+
+  #right #rightBoxThreeWrapper .rightRows .rightRowsPromoted svg{
+   width: 1rem;
+   fill: #657786;
+   vertical-align: bottom;  /* align the elements */
+   margin-top: -2px; /* align the elements */
+  }
+
+  #right #rightBoxThreeWrapper .rightBoxShowMore{
+    grid-column: 1/4;
+  }
+
+  #right #rightBoxThreeWrapper .rightRows button{
+    background-color: #F5F8FA ;
+  box-shadow: none;
+      border: 1px solid #1DA1F2;
+      color: #1DA1F2;
+      font-weight: 800;
+      padding: 5px 16px;
+  }
+
+  #right #rightBoxThreeWrapper .rightRows button:hover{
+    background: rgba(29, 161, 242, 0.2);
+  }
+
+
+  /* BOX 4 */
+  #right #rightBoxFourWrapper .rightRows:hover{
+    background-color: unset;
+  }
+
+ #right #rightBoxFourWrapper > .rightRows {
+    display: grid;
+    grid-template-columns: 44px 85px 1fr 55px 50px;
+    padding: .5rem 1rem;
+    transition: all .5s;
+    align-items: start;
+  }
+
+  #right #rightBoxFourWrapper .rightRows a{
+    font-size: .8rem;
+   color: #657786;
+   text-decoration: none;
+   text-align: center;
+  }
+
+  #right #rightBoxFourWrapper .rightRows a:hover{
+   text-decoration: underline;
+   cursor: pointer;
+  }
+
+  #right #rightBoxFourWrapper .rightRows p{
+    font-size: .8rem;
+    color: #657786;
+    grid-column: 1/6;
+    padding-top: .7rem;
+  }
+
+  #right #rightBoxFourWrapper .rightRows a svg{
+   width: .8rem;
+   fill: #657786;
+   vertical-align: bottom;  /* align the elements */
+
+  }

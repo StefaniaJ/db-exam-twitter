@@ -1,0 +1,43 @@
+#middle .tweet{
+    display: grid;
+    grid-template-columns: .3fr 1fr;
+    column-gap: 10px;
+    background-color: white;
+    border-bottom: 1px solid  rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+#middle .tweet .user_image img{
+width: 100px;
+border-radius: 50%;
+height: 100px;
+}
+
+
+#middle .tweet .tweet_message{
+word-break: break-all;
+}
+
+#middle .tweet .tweet_elements {
+grid-column: 2/3;
+display: grid;
+grid-template-columns: 10fr 10fr 10fr 10fr 10fr;
+color: rgba(0, 0, 0, 0.5);
+}
+
+#middle .tweet .tweet_elements div{
+font-size: 0.8rem;
+}
+
+/* #middle .tweet .tweet_elements div .love{
+    color: red;
+    } */
+
+.love{
+    color: red;
+    }
+
+
+

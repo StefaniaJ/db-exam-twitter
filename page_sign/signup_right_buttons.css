@@ -1,0 +1,21 @@
+#signupRight button{
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    padding: .7rem 0;
+}
+
+#signupRight button a{
+   text-decoration: none;
+   color: #1DA1F2;
+}
+
+#signupRight button#login{
+    background-color: white;
+    border: 1px solid #1DA1F2;
+    color: #1DA1F2;
+}
+
+#signupRight button#login:hover{
+    background-color: #E8F0FE;
+}

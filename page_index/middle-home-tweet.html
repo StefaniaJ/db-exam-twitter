@@ -1,0 +1,22 @@
+<div class="tweet" data-userId="{{userId}}" id="{{tweetId}}">
+
+    <div class="user_image"> <img src="/db-exam-twitter/images/{{userimage}}" alt=""> </div>
+
+    <div>
+        <div>@{{username}}</div>
+        <div class="tweet_message"> {{tweetmesage}} </div>
+        <!-- <button onclick="deleteTweet()"> 🗑️</button> -->
+        <div class="tweet_image"> <img src="/db-exam-twitter/imagesTweets/{{tweetimage}}" alt=""> </div>
+
+    </div>
+
+    <div class="tweet_elements">
+        <div> <i class="far fa-comment-alt fa-fw"></i> {{tweettotalcomments}}</div>
+        <div id="lovediv"> <i class="far fa-heart fa-fw" onclick="loveTweet()"></i>
+            <span>{{tweettotallikes}}</span>
+        </div>
+        <div onclick="deleteTweet()"> <i class="far fa-trash-alt"> Delete</i> </div>
+        <div onclick="updateTweet()"> <i class="far fa-edit">Update</i> </div>
+    </div>
+
+</div>

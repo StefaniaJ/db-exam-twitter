@@ -1,0 +1,44 @@
+
+  /* MODAL */
+  #signupLayout .modal-content{
+    height: 600px;
+    padding-left: 3rem;
+    overflow-y: scroll;
+}
+
+#signupLayout .close{
+    float: right;
+    margin-left: 0;
+    margin-right: .7rem;
+    margin-top: .3rem;
+}
+
+#signupLayout .modal-content svg{
+    width: 1.8rem;
+    fill: #1DA1F2;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+#signupLayout .modal-content h2{
+padding-bottom: 1rem;
+}
+
+#signupLayout .modal-content button{
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  padding: .7rem 0;
+  width: 30%;
+}
+
+#signupLayout .modal-content .form-label {
+  width: 90.2%;
+}
+
+#signupLayout .modal-content .form-group input{
+  max-width: 513px;
+}

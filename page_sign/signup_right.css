@@ -1,0 +1,19 @@
+
+ #signupRight{
+    z-index: 1;
+    background-color: white;
+    height: 93vh;
+    padding-top: 1rem;
+   width: 100%;
+}
+
+#signupRight svg{
+    fill: #1DA1F2;
+    width: 3rem;
+}
+
+#signupRight p{
+    padding-top: 2rem;
+    padding-bottom: .5rem;
+ }
+

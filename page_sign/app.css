@@ -1,0 +1,409 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    width: 100%;
+    overflow: hidden;
+    overflow-y: scroll;
+    font-size: 1rem;
+    font-weight: 300;
+    font-family: "Roboto", sans-serif;
+  }
+  button {
+    width: 100%;
+    padding: 0.1rem 0px;
+    border: none;
+    border-radius: 4rem;
+    color: white;
+    background: rgba(29, 161, 242, 1);
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 8px 28px;
+    cursor: pointer;
+  }
+
+  button:hover, button:focus{
+    background-color:rgb(27 141 211);
+    transition: 200ms ease-in-out;
+    outline: none;
+  }
+
+
+
+
+  /* The Modal (background) */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    padding-top: 2.3rem; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+
+  /* Modal Content */
+  .modal-content {
+    background-color: rgba(255,255,255,1.00);
+    margin: auto;
+    border-radius: 1.2rem;
+    width: 600px;
+    height: 338px;
+  }
+
+  /* The Close Button */
+  .close {
+    color: rgba(29, 161, 242, 1);
+    font-size: 35px;
+    margin-left: 1rem;
+    padding-left: .7rem;
+    padding-right: .7rem;
+    height: auto;
+  transition: all .5s;
+  border-radius: 50%;
+  }
+
+  .close:hover,
+  .close:focus {
+    cursor: pointer;
+    background: rgba(29, 161, 242, 0.2);
+    color: rgba(29, 161, 242, 1);
+  }
+
+  .modal-content .middle-post-tweet-wrapper{
+    border-bottom: 0;
+  }
+
+  .modal-content .middle-post-tweet-wrapper form textarea{
+   height: inherit;
+   font-family: "Roboto", sans-serif;
+   font-size: 1.2rem;
+   font-weight: 400;
+   padding-bottom: 6rem;
+   overflow:hidden;
+  }
+
+  .modal-content .middle-post-tweet-wrapper form div{
+  border-top: 1px solid rgb(230, 236, 240);
+  padding-top: 10px;
+  }
+
+
+  .modal-content .middle-post-tweet-wrapper form div button {
+    width: 31%;
+    padding: 0.6rem 0;
+    font-weight: 700;
+      font-size: 1rem;
+  }
+#loginPage{
+    width: 500px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+}
+
+#loginPage svg{
+    fill: #1DA1F2;
+    width: 2.5rem;
+    padding-top: 1.5rem;
+}
+
+#loginPage h2{
+    padding-bottom: 2rem;
+    padding-top: 1.5rem;
+}
+
+#loginPage .form-group input{
+    max-width: 570px;
+}
+
+#loginPage .form-label {
+    width: 90%;
+    text-align: left;
+}
+
+#loginPage .form-group {
+    width: 550px;}
+
+    #loginPage button{
+        font-size: 15px;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        padding: .7rem 0;
+    }
+
+#loginPage a{
+    text-decoration: none;
+    color: #1B95E0;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+
+#loginPage a:hover{
+    text-decoration: underline;
+}
+/* MODAL */
+  #signupLayout .modal-content{
+    height: 600px;
+    padding-left: 3rem;
+    overflow-y: scroll;
+}
+
+#signupLayout .close{
+    float: right;
+    margin-left: 0;
+    margin-right: .7rem;
+    margin-top: .3rem;
+}
+
+#signupLayout .modal-content svg{
+    width: 1.8rem;
+    fill: #1DA1F2;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+#signupLayout .modal-content h2{
+padding-bottom: 1rem;
+}
+
+#signupLayout .modal-content button{
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  padding: .7rem 0;
+  width: 30%;
+}
+
+#signupLayout .modal-content .form-label {
+  width: 90.2%;
+}
+
+#signupLayout .modal-content .form-group input{
+  max-width: 513px;
+}
+#form-wrapper{
+    margin-top: 2em;
+    margin-bottom: 2em;
+    padding-left: 50px;
+    padding-right: 50px;
+    max-width: 490px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+/* Form */
+.form-label {
+    padding-left: 9px;
+    background-color: #F5F8FA;
+    width: 79.2%;
+    display: block;
+    color: #657786;
+    padding-top: 3px;
+    font-size: 13px;
+    position: absolute;
+    top: 0;
+}
+
+.form-group input {
+    display: block;
+    padding: 1.5rem .6rem .4rem .6rem;
+    font-size: .9rem;
+    width: 90%;
+    margin-bottom: 2.5rem;
+    border: none;
+    border-bottom: 2px solid gray;
+    background-color: #F5F8FA;;
+    border-radius: 2px;
+    max-width: 450px;
+    margin-left: 0;
+    position: relative;
+}
+
+.form-group {
+    position: relative;
+    font-size: 15px;
+  }
+
+.form-control {
+    transition: 0.3s;
+    color: #161616;
+  }
+
+  .form-control:focus{
+    outline: none;
+    border-color: rgb(113, 201, 248);
+  }
+
+  .form-group input:focus + .form-label{
+  color: rgb(113, 201, 248);
+  }
+
+  /* .form-control:valid{
+    border-color: #15a32b;
+  } */
+
+  .error{
+    border-color: red !important;
+  }
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid rgb(230, 236, 240);
+    margin-top: .7rem;
+    padding: 0;
+  }
+
+  /* SIGNUP PAGE */
+#signupLayout{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+#signupLayout #signupBottom{
+grid-column: 1/3;
+}
+
+#signupLayout #signupBottom ul{
+padding-left: 15px;
+padding-right: 15px;
+padding-top: 15px;
+padding-bottom: 10px;
+text-align: center;
+    }
+
+
+    #signupLayout #signupBottom ul li{
+        padding-right: 15px;
+        display: inline;
+        font-size: 13px;
+        color: #5B7083;
+            }
+#signupLeft{
+    background-color: rgb(113, 201, 248);
+    position: relative;
+}
+
+#signupLeft #bird{
+  fill: #1DA1F2;
+  right: -50vh;
+  right: -50vh;
+  width: 58rem;
+  top: -23vh;
+  position: absolute;
+}
+
+#signupLeft div {
+  position: absolute;
+  z-index: 1;
+  color: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  font-size: 19px;
+  font-weight: 800;
+}
+
+#signupLeft div p{
+    padding-bottom: 2rem;
+}
+
+#signupLeft div svg{
+ fill: white;
+ width: 2rem;
+}
+#signupRight{
+    z-index: 1;
+    background-color: white;
+    height: 93vh;
+    padding-top: 1rem;
+   width: 100%;
+}
+
+#signupRight svg{
+    fill: #1DA1F2;
+    width: 3rem;
+}
+
+#signupRight p{
+    padding-top: 2rem;
+    padding-bottom: .5rem;
+ }
+#signupRight button{
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    padding: .7rem 0;
+}
+
+#signupRight button a{
+   text-decoration: none;
+   color: #1DA1F2;
+}
+
+#signupRight button#login{
+    background-color: white;
+    border: 1px solid #1DA1F2;
+    color: #1DA1F2;
+}
+
+#signupRight button#login:hover{
+    background-color: #E8F0FE;
+}
+#signup-login-wrapper  {
+    max-width: 544px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 9rem;
+}
+
+#signup-login-wrapper #loginForm{
+    display: grid;
+    grid-template-columns: 1fr 1fr 75px;
+    }
+
+#signup-login-wrapper .form-group input {
+     display: inline;
+    width: 90%;
+     margin-bottom: 0;
+    max-width: 300px;
+ }
+
+#signup-login-wrapper .form-label {
+    width: 90.2%;
+ }
+
+#signup-login-wrapper a{
+    padding-bottom: 0;
+    padding-top: 5px;
+    font-size: 12px;
+    padding-left: 9px;
+    color: #1DA1F2;
+    text-decoration: none;
+}
+
+#signup-login-wrapper a:hover{
+    text-decoration: underline;
+}
+
+#signup-login-wrapper #loginForm button{
+    height: 39px;
+    max-width: 75px;
+    background-color: white;
+    border: 1px solid #1DA1F2;
+    color: #1DA1F2;
+}
+
+#signup-login-wrapper #loginForm button:hover{
+    background-color: #E8F0FE;
+}

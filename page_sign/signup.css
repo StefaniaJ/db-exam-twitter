@@ -1,0 +1,19 @@
+
+  hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid rgb(230, 236, 240);
+    margin-top: .7rem;
+    padding: 0;
+  }
+
+  /* SIGNUP PAGE */
+#signupLayout{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+
+
+

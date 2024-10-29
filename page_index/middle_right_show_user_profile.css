@@ -1,0 +1,45 @@
+
+
+/* Profile middle six */
+/* #middle #profileMiddleRowTSix{
+    padding-top: 1rem;
+    border-left: 1px solid rgb(230, 236, 240);
+    border-right: 1px solid rgb(230, 236, 240);
+ } */
+
+ #middle #profileMiddleRowTSix .profileOtherUserSubpages{
+     display: none;
+  }
+
+ #middle #profileMiddleRowTSix .profileOtherUserSubpages:first-child{
+     display: block;
+  }
+
+ #middle #profileOtherUserTweetsAndRepliesSubpage, #middle #profileOtherUserMediaSubpage, #middle #profileOtherUserLinksSubpage{
+ padding: 2rem 1rem;
+ text-align: center;
+ }
+
+ #middle .profileSubpageTitleDefould{
+ font-size: 1.3rem;
+ font-weight: 600;
+ padding-bottom: 1rem;
+ }
+
+ #middle .profileSubpageSubtitleDefould{
+ font-size: 1rem;
+ padding-bottom: 1rem;
+ color: #657786;;
+ }
+
+ #middle #profileOtherUserTweetsAndRepliesSubpage button{
+ width: 8rem;
+ padding: .6rem 0;
+ font-weight: 800;
+ }
+
+ #middle #profileOtherUserMediaSubpage button{
+ padding: .6rem 0;
+ font-weight: 800;
+ width: 14rem;
+ }

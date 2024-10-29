@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    width: 100%;
+    overflow: hidden;
+    overflow-y: scroll;
+    font-size: 1rem;
+    font-weight: 300;
+    font-family: "Roboto", sans-serif;
+  }
+  button {
+    width: 100%;
+    padding: 0.1rem 0px;
+    border: none;
+    border-radius: 4rem;
+    color: white;
+    background: rgba(29, 161, 242, 1);
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 8px 28px;
+    cursor: pointer;
+    font-family: 'Roboto';
+  }
+
+  button:hover, button:focus{
+    background-color:rgb(27 141 211);
+    transition: 200ms ease-in-out;
+    outline: none;
+  }
+
+
+
+
+  /* The Modal (background) */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    padding-top: 2.3rem; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+
+  /* Modal Content */
+  .modal-content {
+    background-color: rgba(255,255,255,1.00);
+    margin: auto;
+    border-radius: 1.2rem;
+    width: 600px;
+    height: 338px;
+  }
+
+  /* The Close Button */
+  .close {
+    color: rgba(29, 161, 242, 1);
+    font-size: 35px;
+    margin-left: 1rem;
+    padding-left: .7rem;
+    padding-right: .7rem;
+    height: auto;
+  transition: all .5s;
+  border-radius: 50%;
+  }
+
+  .close:hover,
+  .close:focus {
+    cursor: pointer;
+    background: rgba(29, 161, 242, 0.2);
+    color: rgba(29, 161, 242, 1);
+  }
+
+
+  /* ///////////////////////// */
+.post-tweet-wrapper{
+    display: grid;
+    grid-template-columns: .12fr 1fr;
+    padding: 10px 1rem;
+    }
+
+  .post-tweet-wrapper img{
+  width: 50px;
+  border-radius: 50%;
+}
+
+.post-tweet-wrapper form {
+  padding-top: 0.6rem;
+}
+
+.post-tweet-wrapper form textarea{
+  overflow:hidden;
+  font-family: "Roboto", sans-serif;
+  overflow-y: scroll;
+  font-size: 1.2rem;
+  font-weight: 400;
+  width: 100%;
+  min-height: 128px;
+  border: none;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.post-tweet-wrapper form textarea:focus {
+  outline-style: none;
+}
+
+
+.post-tweet-wrapper form .icons {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 5fr;
+  align-items: center;
+  padding-top: 10px;
+}
+
+
+.modal-tweet-replay{
+  display: grid;
+  grid-template-columns: 25px 1fr;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgb(230, 236, 240);
+  fill: rgba(29, 161, 242, 1);
+  color: rgba(29, 161, 242, 1);
+  cursor: pointer;
+}
+
+.modal-tweet-replay svg{
+width: 20px !important;
+}
+
+.modal-tweet-replay p{
+    font-size: 13px;
+    font-weight: 600;
+    align-self: center;
+}
+
+.post-tweet-wrapper form .icons a svg {
+  fill: rgba(29, 161, 242, 1);
+  width: 2.5rem !important;
+  height: auto;
+  transition: all .5s;
+padding: .5rem;
+border-radius: 50%;
+}
+
+.post-tweet-wrapper  form .icons a svg:hover {
+  background: rgba(29, 161, 242, 0.2);
+  color: rgba(29, 161, 242, 1);
+}
+
+.post-tweet-wrapper form .icons button {
+  justify-self: end;
+  width: 38%;
+  padding: 0.8rem 0;
+}

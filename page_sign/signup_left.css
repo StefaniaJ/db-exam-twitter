@@ -1,0 +1,34 @@
+#signupLeft{
+    background-color: rgb(113, 201, 248);
+    position: relative;
+}
+
+#signupLeft #bird{
+  fill: #1DA1F2;
+  right: -50vh;
+  right: -50vh;
+  width: 58rem;
+  top: -23vh;
+  position: absolute;
+}
+
+#signupLeft div {
+  position: absolute;
+  z-index: 1;
+  color: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  font-size: 19px;
+  font-weight: 800;
+}
+
+#signupLeft div p{
+    padding-bottom: 2rem;
+}
+
+#signupLeft div svg{
+ fill: white;
+ width: 2rem;
+}

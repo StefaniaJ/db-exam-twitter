@@ -1,0 +1,50 @@
+
+#loginPage{
+    width: 500px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+}
+
+#loginPage svg{
+    fill: #1DA1F2;
+    width: 2.5rem;
+    padding-top: 1.5rem;
+}
+
+#loginPage h2{
+    padding-bottom: 2rem;
+    padding-top: 1.5rem;
+}
+
+#loginPage .form-group input{
+    max-width: 570px;
+}
+
+#loginPage .form-label {
+    width: 90%;
+    text-align: left;
+}
+
+#loginPage .form-group {
+    width: 550px;}
+
+    #loginPage button{
+        font-size: 15px;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        padding: .7rem 0;
+    }
+
+#loginPage a{
+    text-decoration: none;
+    color: #1B95E0;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+
+#loginPage a:hover{
+    text-decoration: underline;
+}
